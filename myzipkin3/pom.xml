@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.18.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.gua</groupId>
+    <artifactId>myzipkin3</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>myzipkin3</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!--zipkin-brave start-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-core</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <!--http方式收集-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-spancollector-http</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <!--servlet装配-->
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-web-servlet-filter</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-apache-http-interceptors</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <!--httpclient-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!--zipkin-brave end-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
